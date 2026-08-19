@@ -1,0 +1,223 @@
+<?php
+@ob_start();
+ include('db/connection.php');   
+include('head_index.php'); 
+session_start();
+session_destroy();
+//include('time_now.php');
+include('sidebar.php');
+ob_end_flush();
+?>
+<head>
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+		<!-- page specific plugin styles -->
+		<link rel="stylesheet" href="../assets/css/colorbox.min.css" />
+
+		<!-- text fonts -->
+		<link rel="stylesheet" href="../assets/css/fonts.googleapis.com.css" />
+
+		<!-- ace styles -->
+		<link rel="stylesheet" href="../assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+		<![endif]-->
+		<link rel="stylesheet" href="../assets/css/ace-skins.min.css" />
+		<link rel="stylesheet" href="../assets/css/ace-rtl.min.css" />
+
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+		<script src="../assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+		<!--[if lte IE 8]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+ 
+			<div class="main-content">
+			
+<tr >
+<td colspan="2" valign="top" height="200px">
+<div id="sliderFrame">
+        <div id="slider"> 		
+            <img src="img/shire.jpeg" alt="" />
+			<img src="img/shire2.jpeg" alt="" />
+            <img src="img/shire3.jpeg" alt="" />
+            <img src="img/shire4.jpeg" alt="" />
+            <img src="img/shire5.jpeg" alt="" />
+			<img src="img/shire6.jpeg" alt="" />
+			<img src="img/shire7.jpeg" alt="" />
+			</div>
+    </div>
+</td>
+</tr>
+<!--End of Slide shows-->
+<table align="center" width="850px" height="112" style="-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;margin-bottom:5px;">
+			<tr>  <div style="font-size:26pt;font-family:Verdana;font-weight:bold;font-style:oblique;text-align:center">
+<br>
+ <script>
+ // YOUR TEXT
+var text="ቤት መዘጋጃ ከተማ ሽረ እ/ስላሰ "
+var speed=50 // SPEED OF FADE
+
+if (document.all||document.getElementById){
+document.write('<span id="highlight">' + text + '</span>')
+var storetext=document.getElementById? document.getElementById("highlight") : document.all.highlight
+}
+else
+document.write(text)
+var hex=new Array("00","14","28","3C","50","64","78","8C","A0","B4","C8","DC","F0")
+var r=6
+var g=8
+var b=1
+var seq=1
+function changetext(){
+rainbow="#"+hex[r]+hex[g]+hex[b]
+storetext.style.color=rainbow
+}
+function change(){
+if (seq==6){
+b--
+if (b==0)
+seq=1
+}
+if (seq==5){
+r++
+if (r==12)
+seq=6
+}
+if (seq==4){
+g--
+if (g==0)
+seq=5
+}
+if (seq==3){
+b++
+if (b==12)
+seq=4
+}
+if (seq==2){
+r--
+if (r==0)
+seq=3
+}
+if (seq==1){
+g++
+if (g==12)
+seq=2
+}
+changetext()
+}
+function starteffect(){
+if (document.all||document.getElementById)
+flash=setInterval("change()",speed)
+}
+starteffect()
+</script></div></tr><br>
+     <tr>
+       <td width="50%"><img src="img/animated_book.gif" width="80%" height="117"></td>
+       <td width="70%" img src="img/tg.jpg"><img src="img/tg.jpg" width="100%" height="117"></td>
+     </tr>
+  </table>
+					 
+  								<div class="col-xs-12">
+								
+																	<div>
+									 <?php  //include('slider.php');?>
+									 	 <?php //include('thumbnail.php'); ?>
+								</div><!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						 
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+
+			<?php include('footerboot_home.php'); ?>
+ 
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script src="assets/js/jquery-2.1.4.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="assets/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+		<script src="assets/js/jquery.colorbox.min.js"></script>
+
+		<!-- ace scripts -->
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ኣውራ ገፅ - ምሕደራ ስርዓት ሓበሬታ መዘጋጃቤታዊ እቶት</title>
+<link rel="icon" type="image/png" href="img/tg.jpg"/>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="slideshow/imageslider.css" rel="stylesheet" type="text/css" />
+<script src="slideshow/imageslider.js" type="text/javascript"></script>
+<link href="aa.css" rel="stylesheet" type="text/css" media="screen" />
+<script src="aa.js" type="text/javascript"></script>
+<link href="src/facebox.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="lib/jquery.js" type="text/javascript"></script>
+<script src="src/facebox.js" type="text/javascript"></script>
+		
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($) {
+	var $overflow = '';
+	var colorbox_params = {
+		rel: 'colorbox',
+		reposition:true,
+		scalePhotos:true,
+		scrolling:false,
+		previous:'<i class="ace-icon fa fa-arrow-left"></i>',
+		next:'<i class="ace-icon fa fa-arrow-right"></i>',
+		close:'&times;',
+		current:'{current} of {total}',
+		maxWidth:'100%',
+		maxHeight:'100%',
+		onOpen:function(){
+			$overflow = document.body.style.overflow;
+			document.body.style.overflow = 'hidden';
+		},
+		onClosed:function(){
+			document.body.style.overflow = $overflow;
+		},
+		onComplete:function(){
+			$.colorbox.resize();
+		}
+	};
+
+	$('.ace-thumbnails [data-rel="colorbox"]').colorbox(colorbox_params);
+	$("#cboxLoadingGraphic").html("<i class='ace-icon fa fa-spinner orange fa-spin'></i>");//let's add a custom loading icon
+	
+	
+	$(document).one('ajaxloadstart.page', function(e) {
+		$('#colorbox, #cboxOverlay').remove();
+   });
+})
+		</script>
+	</body>
+</html>

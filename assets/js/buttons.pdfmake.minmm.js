@@ -1,0 +1,8 @@
+/*!
+ DataTables Button PdfMake 2.4.1
+ ©2016-2021 SpryMedia Ltd - datatables.net/license
+*/
+(function(g){"function"===typeof define&&define.amd?define(["jquery","datatables.net","datatables.net-buttons","pdfmake"],function(d){return g(d,window,document)}):"object"===typeof exports?module.exports=function(d,e){d||(d=window);e&&e.fn.dataTable||(e=require("datatables.net")(d,e).$);e.fn.dataTable.Buttons||require("datatables.net-buttons")(d,e);return g(e,d,d.document)}:g(jQuery,window,document)})(function(g,d,e){var c=g.fn.dataTable;c.ext.buttons.pdfHtml5={className:"buttons-pdf buttons-html5",text:function(a){return a.i18n(
+"buttons.pdf","PDF")},action:function(a,b,c,h){var k=b.buttons.exportData(h.exportOptions),l=function(a){for(var b=[],c=0,d=a.length;c<d;c++)b[c]=a[c].join(h.fieldBoundary);return b.join(h.fieldSeparator)},f=d.pdfMake,l=h.customize;if(!f)throw"pdfmake library is required for PDF export";f=f.createPdf({info:{title:h.title?a(h.title):a(""),author:h.author?a(h.author):a(""),subject:h.subject?a(h.subject):"",keywords:h.keywords?a(h.keywords):"",creator:h.creator?a(h.creator):a("DataTables")},pageSize:h.pageSize,
+pageOrientation:h.orientation,pageMargins:h.margins,styles:h.styles||{},content:h.content||[h.headerContent?a(h.headerContent):null,{text:h.message?a(h.message):"",margin:[0,0,0,12]},h.tableContent?a(h.tableContent):{table:{headerRows:1,body:h.body||[l(k.body)]},layout:h.tableLayout},h.footerContent?a(h.footerContent):null]});l&&(f=l(f));f.open()},title:"",message:"",exportOptions:{},fieldBoundary:"",fieldSeparator:",",customize:null,orientation:"portrait",pageSize:"A4",margins:[40,40,40,40],content:null,
+headerContent:null,footerContent:null,tableContent:null,tableLayout:"noBorders"};return c.Buttons});

@@ -1,0 +1,8 @@
+ #printable { display: block; }
+    @media print
+    {
+        #non-printable { display: none; }
+        #printable { display: block; }
+		.pagebreak { page-break-before: auto; } /* page-break-after works, as well */
+		
+    }
